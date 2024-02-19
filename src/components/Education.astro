@@ -1,0 +1,17 @@
+---
+import SectionLayout from "@/components/SectionLayout.astro"
+
+import { education } from "@cv"
+---
+
+<SectionLayout title="Education">
+  {
+    education.map((school) => {
+      return (
+        <h3>{school.institution}</h3>
+        <p>{school.summary}</p>
+      )
+    })
+  }
+
+</SectionLayout>

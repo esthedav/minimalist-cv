@@ -1,0 +1,73 @@
+---
+import SectionLayout from "@/components/SectionLayout.astro"
+
+import { projects } from "@cv"
+---
+
+<SectionLayout title="Projects">
+  <div class="project-wrapper">
+  {
+    projects.map(({ name, description, highlights, url}) => {
+      return (
+      <article>
+      <div class="project-info">
+        <a href={url} target="_blank">
+          <h2>{name}</h2>
+        </a>
+        <p>{description}</p>
+      </div>
+      <footer>
+        {
+          highlights.map((highlight) => {
+            return (
+              <p>{highlight}</p>
+            )
+          })
+        }
+      </footer>
+    </article>
+      )
+    })
+  }
+
+  </div>
+
+</SectionLayout>
+
+<style>
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px #777;
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  footer {
+    display: flex;
+    gap: 8px;
+    & p {
+      background-color: #777;
+      padding: 0 4px;
+      border-radius: 4px;
+    }
+  }
+  a {
+    color: black;
+    
+  }
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: white;
+    }
+  }
+
+</style>

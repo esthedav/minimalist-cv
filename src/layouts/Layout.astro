@@ -1,0 +1,106 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" type="image/svg+xml" href="/logo_favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      "Courier New",
+      Courier,
+      monospace;
+    letter-spacing: -0.025rem;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    text-wrap: pretty;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 24px;
+  }
+  h2 {
+    line-height: 1.75rem;
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 12px;
+  }
+  h4 {
+    line-height: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    span {
+      font-size: 0.75rem;
+    }
+  }
+</style>

@@ -1,0 +1,39 @@
+---
+import SectionLayout from "@/components/SectionLayout.astro"
+
+import {work} from "@cv"
+---
+
+<SectionLayout title="Work Experience">
+  {
+    work.map(({name, startDate, endDate, position, summary}) => {
+      const startYear = new Date(startDate).getFullYear()
+      const endYear = endDate != null? new Date(endDate).getFullYear() : "Actual"
+      return (
+        <article>
+          <header>
+            <h3>{name}</h3>
+            <time>
+              {startYear} - {endYear}
+            </time>
+          </header>
+
+          <h4>{position}</h4>
+          <p>{summary}</p>
+        </article>
+      )
+    })
+  }
+</SectionLayout>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+</style>
+
