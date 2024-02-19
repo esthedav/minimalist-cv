@@ -138,7 +138,7 @@
       "name": "CSS",
       "level": "Jr.",
       "keywords": [
-        "Web development", "Frontend", "Diseño Responsive"
+        "Web development", "Frontend", "Responsive Design"
       ]
     },
     {
@@ -152,28 +152,28 @@
       "name": "Tailwind",
       "level": "Jr",
       "keywords": [
-        "Web development", "Frontend", "CSS Framework", "Diseño Responsive"
+        "Web development", "Frontend", "CSS Framework", "Responsive Design"
       ]
     },
     {
       "name": "MySQL",
       "level": "Jr.",
       "keywords": [
-        "Bases de Datos", "SQL", "Database", "Backend"
+        "Data Bases", "SQL", "Database", "Backend"
       ]
     },
     {
       "name": "Git",
       "level": "Jr.",
       "keywords": [
-        "Version control", "Colaboración", "Source code"
+        "Control version", "Collaboration"
       ]
     },
     {
       "name": "GitHub",
       "level": "Jr.",
       "keywords": [
-        "Version control", "Collaboration", "Source code", "Git"
+        "Control version", "Collaboration", "Source code", "Git"
       ]
     },
     {
@@ -181,6 +181,20 @@
       "level": "Jr.",
       "keywords": [
         "Web development", "Frontend", "JavaScript Library", "UI"
+      ]
+    },
+    {
+      "name": "Accounting",
+      "level": "Entry",
+      "keywords": [
+        "GL Analysis"
+      ]
+    },
+    {
+      "name": "GL Analysis",
+      "level": "Entry",
+      "keywords": [
+        "GL Analysis"
       ]
     }
   ],
